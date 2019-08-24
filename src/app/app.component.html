@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class = "container-fluid">
+    <div class = "row"style="width: 1920px; height: 1080px">
+        <div class = "col-sm-2 " style="width: 150px; height: 1088px;top: 0px;left: 0px;background: #103C6E " >
+            <nav>
+                <a routerLink="/newentry" routerLinkActive="active" target="body" style="color: cornsilk">NewEntry</a><br>
+                <a routerLink="/mylog" routerLinkActive="active" target="body" style="color: cornsilk">MyLog</a>
+              </nav>
+        </div>
+        <div name="body" class = "col-sm-10" style="background-color: cornflowerblue">
+            <div class="row"  style="width: 1600px; height:64px; background: cornsilk">
+            </div>
+            <div class="ROW">
+                <router-outlet></router-outlet> 
+            </div>
+        </div>
+     </div>
+
+</div>
+
+
+

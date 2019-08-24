@@ -1,0 +1,15 @@
+
+<table class="table table-sm">
+    <thead>
+      <th>Food Category</th><th>Food Items</th><th>Calories</th>
+    </thead>
+  
+    <ng-container *ngFor="let contact of myfooddata">
+      <tr class="table-dark">
+        <td>{{contact.category}}</td>
+        <td>{{contact.foodItems}}</td>
+        <td>{{contact.calories}}</td>
+     </tr>
+    </ng-container> 
+  </table>
+  

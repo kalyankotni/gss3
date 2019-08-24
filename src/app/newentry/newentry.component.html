@@ -1,0 +1,39 @@
+
+<form #userForm="ngForm" (ngSubmit)="saveFoodItems(userForm.value)">
+  <h4>New Entry</h4>
+  <div class="col-md-4 col-xs-12">
+    <table><td>
+      <div class="form-group">
+        <label>Food Category</label>
+        <select  class="form-control" [(ngModel)]="selectedFoodCatg" (change)="onFoodItems($event.target.value)"
+          name='category' ngModel #category="ngModel" style="width: 200px">
+          <option>--Select Category--</option>
+          <option *ngFor="let foodCategory of foodCategoryInfo; let i = index" value="{{i}}-{{foodCategory.name}}">
+            {{foodCategory.name}}</option>
+        </select>
+      </div></td><td>
+
+      <div class="form-group">
+        <label>Food Items </label>
+        <select class="form-control" (change)="onCalories($event.target.value)" name='foodItems' ngModel
+          #foodItems="ngModel" style="width: 200px">
+          <option selected=true>--Select food--</option>
+          <option *ngFor="let foodItem of foodItemInfo; let j = index"
+            value="{{j}}-{{foodItem.name}}-{{foodItem.totalCalories}}">{{foodItem.name}}</option>
+        </select>
+      </div></td><td>
+
+      <div class="form-group">
+       
+        <label>Calories </label>
+        <input type='text' class='form-control' [value]=caloriesInfo name='calories' ngModel >
+      </div></td>
+    </table>
+    <div class="row">
+    <div><input type="submit" value="submit">
+    </div>
+    <div><input type="button" value="cancel">
+    </div></div>
+  </div>
+
+</form>
